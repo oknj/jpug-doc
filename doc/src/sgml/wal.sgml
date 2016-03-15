@@ -718,7 +718,7 @@ WALライタは稼働中に一回ページ全体を書き込むように設計�
 <!--
    The server's checkpointer process automatically performs
    a checkpoint every so often.  A checkpoint is begun every <xref
-   linkend="guc-checkpoint-timeout"> seconds, or if
+   linkend="guc-checkpoint-timeout"> seconds, or if one-third of
    <xref linkend="guc-max-wal-size"> is about to be exceeded,
    whichever comes first.
    The default settings are 5 minutes and 1 GB, respectively.
@@ -732,7 +732,7 @@ WALライタは稼働中に一回ページ全体を書き込むように設計�
    command <command>CHECKPOINT</command>.
 -->
 サーバのチェックポインタプロセスは、自動的にチェックポイントを時々実行します。
-<xref linkend="guc-checkpoint-timeout">秒が経過するか、または<xref linkend="guc-max-wal-size">に達するか、どちらかの条件が最初に満たされるとチェックポイントが開始されます。
+<xref linkend="guc-checkpoint-timeout">秒が経過するか、または<xref linkend="guc-max-wal-size">の三分の一に達するか、どちらかの条件が最初に満たされるとチェックポイントが開始されます。
 デフォルトの設定では、それぞれ5分と1GBとなっています。
 前回のチェックポイント以降書き出すWALがない場合、<varname>checkpoint_timeout</>が経過したとしても新しいチェックポイントが飛ばされます。
 WALアーカイブ処理を使用しており、かつ、データ損失の可能性を限定するためにファイルのアーカイブ頻度に対する下限を設定したい場合、このチェックポイントパラメータではなく<xref linkend="guc-archive-timeout">パラメータを調節しなければなりません。
