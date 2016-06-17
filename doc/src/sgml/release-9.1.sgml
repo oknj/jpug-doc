@@ -6669,7 +6669,7 @@ Windowsエラーコード変換のログ取得時に発生する可能性があ�
       Fix checkpoint memory leak in background writer when <literal>wal_level =
       hot_standby</> (Naoya Anzai)
 -->
-<literal>wal_level = hot_standby</>のときにバックグラウンドライターがチェックポイントでメモリリークを起こすのを修正しました。(Naoya Anzai)
+<literal>wal_level = hot_standby</>のときにバックグラウンドライタがチェックポイントでメモリリークを起こすのを修正しました。(Naoya Anzai)
      </para>
     </listitem>
 
